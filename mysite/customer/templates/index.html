@@ -1,0 +1,14 @@
+
+<html>
+<body>
+    <h1>Customers</h1>
+
+    {% for Customer in customer %}
+    <ul Customers that would like to rent: >
+    <li>  {{ Customer.name }} </li>
+    <li>{{ Customer.address }}, {{ Customer.age }}</li>
+    </ul>
+    {% endfor%}
+</body>
+
+</html>

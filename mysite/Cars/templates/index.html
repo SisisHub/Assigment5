@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+    <body>
+        <style>
+                html{
+                text-align:center;
+                }
+
+        </style>
+    <h1>Rental service</h1>
+<br>
+    <h3> The cars we offer </h3>
+<br>
+    <div class="row">
+        {% for Car in Cars %}
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+
+                <div class="card-body">
+                    <h5 class="card-title"> {{ Car.make }}, {{ Car.carmodel }}</h5>
+                    <p class="card-text">{{ Car.location }},{{ Car.year }}, {{ Car.status }}</p>
+                    <a href="http://127.0.0.1:8000/customer/" class="btn btn-primary"> Rent </a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </body>
+{% endblock %}
+</html>
+

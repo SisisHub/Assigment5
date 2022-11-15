@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<body>
+<h1>Employee</h1>
+<div class="row">
+    {% for Employee in employee %}
+    <div class="col">
+        <div class="card" style="width: 18rem;">
+
+            <div class="card-body">
+                <h5 class="card-title"> {{ Employee.name }}</h5>
+                <p class="card-text">{{ Employee.address }}, {{ Employee.branch }}</p>
+                <a href="#" class="btn btn-primary"> Rent </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</body>
+{% endblock %}
+</html>
